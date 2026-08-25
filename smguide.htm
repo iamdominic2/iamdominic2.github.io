@@ -86,7 +86,7 @@ Initialize Git in your collection folder:
 git init<br>
 git remote add origin git@github.com:username/reponame.git
 <br><br>
-3. Make a .gitignore with Notepad:<br>
+3. OPTIONAL: Make a .gitignore with Notepad:<br>
 temp/<br>
 reports/<br><br>
 
@@ -96,6 +96,7 @@ git commit -m "$(date +'%Y-%m-%d %H:%M')"<br>
 git push origin main --force<br>
 <br>
 5. To DOWNLOAD from the server for instance if you use multiple computers (note that this replaces your entire directory with what is in the repo) (you can make a file called PULL.sh)<br>
+git stash -u
 git fetch origin main<br>
 git reset --hard origin/main<br>
 git clean --force -d<br>
