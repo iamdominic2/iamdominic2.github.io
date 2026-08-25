@@ -93,17 +93,17 @@ reports/<br><br>
 4. To UPLOAD to the server (you can make a file called PUSH.sh):<br>
 git add .<br>
 git commit -m "$(date +'%Y-%m-%d %H:%M')"<br>
-git push origin main<br>
+git push origin main --force<br>
 <br>
 5. To DOWNLOAD from the server for instance if you use multiple computers (note that this replaces your entire directory with what is in the repo) (you can make a file called PULL.sh)<br>
-git pull origin main<br>
+git fetch origin main<br>
 git reset --hard origin/main<br>
-git clean -fd<br>
+git clean --force -d<br>
 <br>
 In case you need to revert from a backup, find the commit hash from git reflog:<br>
 git reflog<br>
 git reset --hard [INSERT COMMIT HASH HERE]<br>
-git clean -fd<br>
+git clean --force -d<br>
 <br>
 For all of these if you don't close SuperMemo first, git will fail to access your files<br>
 <br>
