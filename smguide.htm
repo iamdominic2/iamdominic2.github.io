@@ -6,9 +6,9 @@
 <center><table width="900"><tr><td>
 <a href="https://iamdominic2.github.io">< I don't use SuperMemo, can I go back Home?</a>
 <h2>BASICS</h2>
-After downloading SuperMemo:<BR>
+After <a href="https://super-memory.com/english/down.htm">downloading SuperMemo</a>:<BR>
 Add New: Add a new Q&A pair (Alt+A). Cloze deletions (fill in the blank) will be covered later.<br>
-Learn: Review your content (which may not come until a day later!) (Ctrl+L). (Contrary to popular belief, if you don't do all your repetitions, it's still better than abandoning material by deleting it (assuming they are not useless.) Reviewing material late actually gives bonus intervals (unlike SM-2 or even FSRS, from my observations). SuperMemo strictly orders itself such that intervals must grow by 1 compared to the actual previous interval.
+Learn: Review your content (which may not come until a day later!) (Ctrl+L). (Contrary to popular belief, if you don't do all your repetitions, it's still better than abandoning material by deleting it (assuming they are not useless.) Reviewing material late actually gives bonus intervals (unlike SM-2 or even FSRS, from my observations). SuperMemo strictly orders itself such that intervals must grow by 1 compared to the actual previous interval.)
 <BR><BR>
 <h3>Learning</h3>
 Personally, I would suggest you change the sorting criteria to ONLY items in learning if you are a beginner. Topics may interrupt your workflow. Alt+L -> O -> C. Drag the first slider all the way to the left. You can always review interesting topic titles manually. However, this doesn't appear to be the mainstream SuperMemo advice, as they love reading. (for now.)
@@ -24,7 +24,7 @@ Q: Edit question<br>
 A: Edit answer(For these two, you can also just click with the mouse the "box")<br>
 Alt+A: New Item<br>
 Alt+N: New Blank Topic (not from clipboard)<br>
-Ctrl+F: Search texts<br>
+Ctrl+F: Search elements<br>
 F3: Search current element<br>
 Alt+. : Delete all text after cursor <br>
 Alt+\: Delete all text before cursor
@@ -61,18 +61,17 @@ Done (Ctrl+Shift+Enter) = Remove all components in the element, and dismiss it i
 Delete (Ctrl+Shift+Del) will also delete children, so be careful.
 
 <h2>Reading web/wiki articles</h2>
-To import from Wikipedia or other sources, there are 3 methods<br>
+To import from Wikipedia or other sources, there are 2 recommended methods<br>
 1. Copy the website and press Ctrl+N to generate a new article from clipboard contents<br>
 2. Web import (Alt -> E -> W): Import from Chrome or Edge. SuperMemo 19 or later<br>
-3. Internet Explorer import (Ctrl+Shift+A): NOT RECOMMENDED! Most websites fail to load :( Plus, I don't think you can open IE anymore.<br>
 The core premise remains the same - you wish to remember interesting or/and useful information, so the extracting and cloze workflow can work pretty well, though it's a bit harder for e.g. fiction books.
 
 <h3>Splitting</h3>
 For long articles, HTML headings (e.g. from Wikipedia) are perfect for this. Ctrl+Enter (Commander) -> Split, or Alt+F12 > R > S > S. Afterwards, you can execute Done on the original to save storage space. I suggest h1 to h6
 
 <h3> Wikipedias vs blogs </h3>
-Wikipedia: Objective knowledge from the "convergence" of the entire world. Good for "facts", bad for subjective advice. And surprisingly to most, it is usually much more accurate than books (that cannot have previous copies be re-edited after publishing). Probably good for science topics where the whole point is truth by observation. The downside is that there isn't much advice or many experiences; for instance, the meta-classic one is how to use SuperMemo better! (other than famous people, which may carry a bit of a survivorship bias)<br>
-Blogs: Subjective, usually based on one man's thoughts, like SuperMemo Guru. The benefit is that the unfiltered train of thought, like telling the truth about the harms of the education system can come to exist there. The downside is that the reward may be variable: some blogs may be generic, some may be somewhat wrong - yet I sometimes tend to prefer them, as some subjectivity w/ the human soul is better than none.<br>
+Wikipedia: Objective knowledge from the "convergence" of the entire world. Good for "facts", bad for subjective advice. And surprisingly to most, it is usually much more accurate than books (that cannot have previous copies be re-edited after publishing). Probably good for science topics where the whole point is truth by observation. The downside is that there isn't much advice or many experiences; for instance, the meta-classic one is how to use SuperMemo better! (other than famous people, which may carry a bit of a survivorship bias)<br><Br>
+Blogs: Subjective, usually based on one man's thoughts, like SuperMemo Guru. The benefit is that the unfiltered train of thought, like telling the truth about the harms of the education system can come to exist there. The downside is that the reward may be variable: some blogs may be generic, some may be somewhat wrong - yet I sometimes tend to prefer them, as some subjectivity w/ the human soul is better than none.<br><Br>
 The important thing is that these are not false dichotomies: for instance, you can import a Wikipedia article about the history and meaning of a psychological bias, and then read a blog about how it harms people and how to avoid/"flip" it to help you. The best option is a balance!!
 
 <h2> Syncing with Github </h2>
@@ -80,31 +79,31 @@ Using Git for SuperMemo backup is recommended. SuperMemo may break out, and whil
 <br><br>
 Initialize Git in your collection folder:
 <br><br>
-1. Download Git for windows
+1. <a href="https://git-scm.com/install/windows">Download Git for windows</a>
 <br><br>
-2. Make a GitHub account, then make a repo. Open Git Bash inside your SuperMemo collection directory and run :<br>
-git init<br>
-git remote add origin git@github.com:username/reponame.git
+2. Make a GitHub account, then make a repo. Open Git Bash inside your SuperMemo directory and run :<br><br>
+<code>git init</code><br>
+<code>git remote add origin git@github.com:username/reponame.git</code>
 <br><br>
-3. OPTIONAL: Make a .gitignore with Notepad:<br>
-temp/<br>
-reports/<br><br>
+3. OPTIONAL: Make a file called <code>.gitignore</code>:<br><br>
+<code>temp/</code><br>
+<code>reports/</code><br><br>
 
-4. To UPLOAD to the server (you can make a file called PUSH.sh):<br>
-git add .<br>
-git commit -m "$(date +'%Y-%m-%d %H:%M')"<br>
-git push origin main --force<br>
+4. To UPLOAD to the server (you can make a file called <code>PUSH.sh</code>):<br><br>
+<code>git add .</code><br>
+<code>git commit -m "$(date +'%Y-%m-%d %H:%M')"</code><br>
+<code>git push origin main --force</code><br>
 <br>
-5. To DOWNLOAD from the server for instance if you use multiple computers (note that this replaces your entire directory with what is in the repo) (you can make a file called PULL.sh)<br>
-git stash -u
-git fetch origin main<br>
-git reset --hard origin/main<br>
-git clean --force -d<br>
+5. To DOWNLOAD from the server for instance if you use multiple computers (note that this replaces your entire directory with what is in the repo) (you can make a file called <code>PULL.sh</code>)<br><br>
+<code>git stash -u</code><br>
+<code>git fetch origin main</code><br>
+<code>git reset --hard origin/main</code><br>
+<code>git clean --force -d</code><br>
 <br>
-In case you need to revert from a backup, find the commit hash from git reflog:<br>
-git reflog<br>
-git reset --hard [INSERT COMMIT HASH HERE]<br>
-git clean --force -d<br>
+In case you need to revert from a backup, find the commit hash from the reflog:<br><br>
+<code>git reflog</code><br>
+<code>git reset --hard [INSERT COMMIT HASH HERE]</code><br>
+<code>git clean --force -d</code><br>
 <br>
 For all of these if you don't close SuperMemo first, git will fail to access your files<br>
 <br>
