@@ -1,0 +1,46 @@
+<P></P>
+<STYLE disabled>BODY {
+&#9;BACKGROUND-COLOR: lightblue
+}
+</STYLE><center><table width="900"><tr><td>
+<a href=index.htm> < Back to catalogue</a>
+</STYLE><center><table width="900"><tr><td>
+<h1>How to publish Scratch games on GitHub</h1>
+1. Either download the .sb3 file or share it on Scratch<br><br>
+2. Go to <a href="https://packager.turbowarp.org/">TurboWarp Packager</a> and either paste in your Project ID or drag-and-drop the .sb3 file<br><br>
+3. Depending on project, you can tick the "Start project automatically instead of showing a big green flag" option, and mess with Runtime Options and Player Options. <br>
+If you wish to be most professional, edit your project to allow restarts without pressing the Green Flag, and disable all Player Options except "Start project automatically instead of showing a big green flag", and turn on High Quality Pen<br>
+<h2>As standalone HTML</h2>
+4. Choose <STRONG>Plain HTML</STRONG> and download it.<br>
+<br>
+5. Rename it to <code>index.html</code><br>
+<h2>As .zip</h2>
+This is ideal if index.html is over 100MB big.<br>
+<br>
+4. Choose <strong>Zip</strong> and download it.<br>
+<br>
+5. Extract the contents to a folder.<br>
+<br>
+<h2>Continued</h2>
+6. Create a GitHub repo (if you have not done so already)<br>
+<br>
+7. Upload the index.html file (<strong>Standalone HTML</strong>) or the Folder (<strong>Zip</strong>) either through GitHub itself or through the shell.<br>
+<br>
+8. In the same repo, go to Settings -> Pages. Sources: Deploy from a Branch. Branch: <code>main</code> <code>/root</code>. Save.<br>
+<br>
+9. View your project at https://USERNAME.github.io/REPONAME
+<h1>Optional things you can add</h1>
+1. Your Scratch Project <a href="https://www.rokcoder.com/sb3-to-txt/">converted into texts</a> (useful in checking diffs, will be located at /scripts)<br>
+<br>
+2. the .sb3 file is just a .zip file in disguise, so you can unzip it into something like /media and you will see the raw media assets and a <code>project.json</code> file.<br><br>
+3. Of course, the .sb3 file itself, if you want people to see that it really is Scratch. Of course, you can also do the converse.<br><br>
+4. Package it as Windows, MacOS, Linux apps and upload the .zip files to GitHub Releases (right sidebar)<br>
+<br>
+<strong>How to do so: Choose from:</strong><br><br>
+ Electron Windows application (32-bit)<br>
+<br>
+ WKWebView macOS application<br>
+<br>
+ Electron Linux application (64-bit)<br>
+<h3>Now you're quite a pro! Well done!</h3>
+<FONT SIZE=4><a href="https://iamdominic2.github.io">Home</a> 
