@@ -16,7 +16,7 @@ Personally, I would suggest you change the sorting criteria to ONLY items in lea
 <h4>For items: There are 4 rules:</h4>
 1. Try to recall the answer from the question<br>
 2. Press Show Answer (Enter)<br>
-3. Grade yourself from 1-5. The most important thing is that 1-2 is incorrect, and 3-5 is Correct (in fact, there is barely any difference in the intervals between 3-5, though SuperMemo does fuzz out your cards a lot). The default is 3. Personally, I just press Enter if it is correct, and press 1 on the keyboard if not.<br>
+3. Grade yourself from 1-5. The most important thing is that 1-2 is incorrect, and 3-5 is Correct (in fact, there is barely any difference in the intervals between 3-5, though SuperMemo does fuzz out your cards a lot). The default is 3. Personally, if you hate decision fatigue, you can just press 4 if it is correct, and press 1 on the keyboard if not.<br>
 4. Press Next Repetition until perhaps your efficiency drops, or you feel fatigued, or have other stuff to do, or you would like to read more articles.<br>
 
 <h4>Editing</h4>
@@ -43,7 +43,7 @@ Also, I suggest File > Professional. There isn't much point in intentionally hid
 Alt+K -> O
 Algorithm alert: 9880% diff, 9999 days, 7 factor (just a disturbance)<br>
 No leech management - you can see lapse count in Learnbar anyways<br>
-Also, in Contents window, turn Syncronize ON (second last in top bar, left to magnifying glass)
+Also, in Contents window, turn Synchronize ON (second last in top bar, left to magnifying glass)
 
 <h2>Knowledge tree</h2>
 If you want to keep things organized, right-click an element in the Knowledge tree > New > Item or Topic.
@@ -69,12 +69,12 @@ The core premise remains the same - you wish to remember interesting or/and usef
 <h3>Splitting</h3>
 For long articles, HTML headings (e.g. from Wikipedia) are perfect for this. Ctrl+Enter (Commander) -> Split, or Alt+F12 > R > S > S. Afterwards, you can execute Done on the original to save storage space. I suggest h1 to h6
 
-<h3> Wikipedias vs blogs </h3>
+<h3> Wikipedia vs blogs </h3>
 Wikipedia: Objective knowledge from the "convergence" of the entire world. Good for "facts", bad for subjective advice. And surprisingly to most, it is usually much more accurate than books (that cannot have previous copies be re-edited after publishing). Probably good for science topics where the whole point is truth by observation. The downside is that there isn't much advice or many experiences; for instance, the meta-classic one is how to use SuperMemo better! (other than famous people, which may carry a bit of a survivorship bias)<br><Br>
 Blogs: Subjective, usually based on one man's thoughts, like SuperMemo Guru. The benefit is that the unfiltered train of thought, like telling the truth about the harms of the education system can come to exist there. The downside is that the reward may be variable: some blogs may be generic, some may be somewhat wrong - yet I sometimes tend to prefer them, as some subjectivity w/ the human soul is better than none.<br><Br>
 The important thing is that these are not false dichotomies: for instance, you can import a Wikipedia article about the history and meaning of a psychological bias, and then read a blog about how it harms people and how to avoid/"flip" it to help you. The best option is a balance!!
 
-<h2> Syncing with Github </h2>
+<h2> Syncing with GitHub </h2>
 Using Git for SuperMemo backup is recommended. SuperMemo may break out, and while Repair Collection can recover most, it cannot recover from file destruction in the first place. Git helps with that. And it also doubles up as a cloud syncing service. 
 <br><br>
 Initialize Git in your collection folder:
@@ -100,14 +100,14 @@ Initialize Git in your collection folder:
 <code>git reset --hard origin/main</code><br>
 <code>git clean --force</code><br>
 <br>
-In case you need to revert from a backup, find the commit hash from the reflog:<br><br>
-<code>git reflog</code><br>
+In case you need to revert from a backup, find the commit hash from the log:<br><br>
+<code>git log --oneline</code><br>
 <code>git reset --hard [INSERT COMMIT HASH HERE]</code><br>
 <code>git clean --force -d</code><br>
 <br>
 For all of these if you don't close SuperMemo first, git will fail to access your files<br>
 <br>
-<h3>Why Git and Github?</h3>
+<h3>Why Git and GitHub?</h3>
 There are some cases of data annihilation if a cloud-sync service reads and locks a file at the exact time SuperMemo accesses it - plus those are syncing tools, not version control tools
 
 <h2> Grats? </h2>
