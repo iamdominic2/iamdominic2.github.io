@@ -7,7 +7,7 @@
 
 output sysprompt to germini.md  
 
-## Assistant
+## Gemini
 
 Python```
 sysprompt_content = """# Gemini System Instructions & System Prompt

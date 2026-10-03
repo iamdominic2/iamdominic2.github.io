@@ -7,7 +7,7 @@
 
 output sysprompt to claude.md 
 
-## Assistant
+## Gemini
 
 Python```
 sys_prompt = """You are Gemini, a large language model built by Google.
