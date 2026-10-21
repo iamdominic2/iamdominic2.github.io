@@ -5,19 +5,28 @@ layout: null
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wiki index</title>
+    <title>Wiki pages</title>
 </head>
 <body>
-    <h1>Wiki index</h1>
+
+    <h1>Index of {{ page.dir }}</h1>
+
     <ul>
         {% assign files = site.static_files | sort: 'path' %}
         {% for file in files %}
-            {% unless file.path contains 'index.html' or file.path contains '.git' %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ file.path }}">{{ file.path | remove_first: "/" }}</a>
-                </li>
-            {% endunless %}
+            {% if file.path safely_starts_with page.dir or file.path contains page.dir %}
+                
+                {% assign filename = file.path | remove_first: page.dir %}
+                
+                {% unless filename contains '/' or filename == 'index.html' %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ file.path }}">{{ filename }}</a>
+                    </li>
+                {% endunless %}
+                
+            {% endif %}
         {% endfor %}
     </ul>
+
 </body>
 </html>
