@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki index</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 8px; border-bottom: 1px solid #eee; }
+        a { text-decoration: none; color: #0366d6; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Index of Files</h1>
+    <ul>
+        {% assign files = site.static_files | sort: 'path' %}
+        {% for file in files %}
+            {% unless file.path contains 'index.html' or file.path contains '.git' %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ file.path }}">{{ file.path | remove_first: "/" }}</a>
+                </li>
+            {% endunless %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
